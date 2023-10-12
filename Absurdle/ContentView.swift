@@ -114,6 +114,8 @@ struct TextEntrySquare: View {
                     currentLetter = ""
                 }
             }
+            .multilineTextAlignment(.center)
+            .textInputAutocapitalization(.characters)
             .focused($isFocused)
             .background(
                 Rectangle().foregroundStyle(.white)
