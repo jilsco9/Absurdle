@@ -15,6 +15,7 @@
 		A17DE2212AD75B2F00C3E901 /* AbsurdleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17DE2202AD75B2F00C3E901 /* AbsurdleTests.swift */; };
 		A17DE22B2AD75B2F00C3E901 /* AbsurdleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17DE22A2AD75B2F00C3E901 /* AbsurdleUITests.swift */; };
 		A17DE22D2AD75B2F00C3E901 /* AbsurdleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17DE22C2AD75B2F00C3E901 /* AbsurdleUITestsLaunchTests.swift */; };
+		A17DE23A2AD75EDF00C3E901 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17DE2392AD75EDF00C3E901 /* GameEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		A17DE2262AD75B2F00C3E901 /* AbsurdleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AbsurdleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17DE22A2AD75B2F00C3E901 /* AbsurdleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsurdleUITests.swift; sourceTree = "<group>"; };
 		A17DE22C2AD75B2F00C3E901 /* AbsurdleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsurdleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A17DE2392AD75EDF00C3E901 /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				A17DE20B2AD75B2D00C3E901 /* AbsurdleApp.swift */,
+				A17DE2392AD75EDF00C3E901 /* GameEngine.swift */,
 				A17DE20D2AD75B2D00C3E901 /* ContentView.swift */,
 				A17DE20F2AD75B2D00C3E901 /* Item.swift */,
 				A17DE2112AD75B2F00C3E901 /* Assets.xcassets */,
@@ -267,6 +270,7 @@
 				A17DE20E2AD75B2D00C3E901 /* ContentView.swift in Sources */,
 				A17DE2102AD75B2D00C3E901 /* Item.swift in Sources */,
 				A17DE20C2AD75B2D00C3E901 /* AbsurdleApp.swift in Sources */,
+				A17DE23A2AD75EDF00C3E901 /* GameEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

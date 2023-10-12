@@ -12,7 +12,7 @@ import SwiftData
 struct AbsurdleApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Stats.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -22,11 +22,14 @@ struct AbsurdleApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+    
+    @StateObject var gameEngine = GameEngine()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+        .environmentObject(gameEngine)
         .modelContainer(sharedModelContainer)
     }
 }
