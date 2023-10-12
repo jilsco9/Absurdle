@@ -27,7 +27,9 @@ struct AbsurdleApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                ContentView()
+            }
         }
         .environmentObject(gameEngine)
         .modelContainer(sharedModelContainer)
