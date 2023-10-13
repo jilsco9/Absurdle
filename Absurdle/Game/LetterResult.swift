@@ -45,4 +45,15 @@ enum LetterResult {
             return ""
         }
     }
+    
+    var isCorrect: Bool {
+        switch self {
+        case .correctLocation:
+            return true
+        case .incorrectLocation,
+                .notInWord,
+                .unknown:
+            return false
+        }
+    }
 }

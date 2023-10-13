@@ -14,6 +14,7 @@ struct GuessView: View {
     
     @Binding var submittedGuesses: [[GuessedLetterResult]]
     @Binding var currentGuess: String
+    let gameState: GameContainerView.GameState
     @EnvironmentObject var gameEngine: GameEngine
     
     var body: some View {
@@ -21,7 +22,7 @@ struct GuessView: View {
             AnimatingResultSquare(result: submittedGuesses[row][column])
         } else if row < currentRow {
             ResultSquare(result: submittedGuesses[row][column].result)
-        } else if row == currentRow {
+        } else if row == currentRow, case .ongoing = gameState {
             CurrentGuessSquare(column: column, currentGuess: $currentGuess)
         } else {
             LetterSquare(backgroundColor: Color.futureGuessGray) {
@@ -37,6 +38,6 @@ struct GuessView_Preview: PreviewProvider {
     @State static var shouldAnimate: Bool = false
     
     static var previews: some View {
-        GuessView(row: 0, column: 0, currentRow: 0, submittedGuesses: $submittedGuesses, currentGuess: $currentGuess)
+        GuessView(row: 0, column: 0, currentRow: 0, submittedGuesses: $submittedGuesses, currentGuess: $currentGuess, gameState: .ongoing)
     }
 }

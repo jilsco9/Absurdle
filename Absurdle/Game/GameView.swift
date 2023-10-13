@@ -9,8 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct GameView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Stats]
     
     @EnvironmentObject var gameEngine: GameEngine
     
@@ -18,10 +16,11 @@ struct GameView: View {
     @State var currentGuess: String = ""
     @State var submittedGuesses: [[GuessedLetterResult]] = []
     @State var shouldAnimateLastGuess: Bool = false
+    
+    @Binding var gameState: GameContainerView.GameState
         
     let rows = GameEngine.guessesMax
     let columns = GameEngine.wordLength
-    
     
     func revealResults(for row: Int) {
         for column in 0..<GameEngine.wordLength {
@@ -41,7 +40,8 @@ struct GameView: View {
                             column: column,
                             currentRow: currentRow,
                             submittedGuesses: $submittedGuesses,
-                            currentGuess: $currentGuess
+                            currentGuess: $currentGuess,
+                            gameState: gameState
                         )
                     }
                 }
@@ -55,6 +55,12 @@ struct GameView: View {
                         let result = try await gameEngine.guessWord(currentGuess)
                         submittedGuesses.append(result)
                         revealResults(for: currentRow)
+                        
+                        if let gameResult = gameEngine.resultIfGameShouldEnd(latestGuess: result, guesses: submittedGuesses.count) {
+                            print("Finishing game")
+                            gameState = .finished(result: gameResult)
+                        }
+                        
                         currentRow += 1
                         currentGuess = ""
                     } catch {
@@ -63,19 +69,7 @@ struct GameView: View {
                 }
             }
         }
-        .task {
-            do {
-                try await gameEngine.getGameDetails()
-            } catch {
-                print(error)
-            }
-        }
+
         
     }
-}
-
-#Preview {
-    GameView()
-        .environmentObject(GameEngine())
-        .modelContainer(for: Stats.self, inMemory: true)
 }

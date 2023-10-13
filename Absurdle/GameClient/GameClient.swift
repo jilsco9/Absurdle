@@ -42,6 +42,8 @@ actor MockGameClient: GameClient {
                 "yacht",
                 "zebra"
         ].randomElement()! // Safe to force unwrap, because we know the collection is not nil
+        print(word)
+        
         return GameDetails(targetWord: word, gameDate: date)
     }
     

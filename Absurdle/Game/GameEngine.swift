@@ -36,4 +36,17 @@ class GameEngine: ObservableObject {
         
         return guessHandler.guessWord(guess).map { GuessedLetterResult(result: $0) }
     }
+    
+    func resultIfGameShouldEnd(latestGuess: [GuessedLetterResult], guesses: Int) -> GameResult? {
+        let wasLastGuess = guesses == Self.guessesMax
+        
+        let latestGuessIsCorrect = latestGuess.filter { $0.result.isCorrect }.count == Self.wordLength
+        
+        guard wasLastGuess || latestGuessIsCorrect else { return nil }
+    
+        let guesses = latestGuessIsCorrect ? guesses: nil
+        
+        return GameResult(date: guessHandler?.gameDate ?? Date(), guesses: guesses, solved: latestGuessIsCorrect)
+        
+    }
 }

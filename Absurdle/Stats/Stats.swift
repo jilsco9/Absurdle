@@ -21,13 +21,12 @@ final class Stats {
     }
 }
 
-@Model
 final class GameResult {
-    var date: Date?
+    var date: Date
     var guesses: Int?
-    var solved: Bool?
+    var solved: Bool
     
-    init(date: Date? = nil, guesses: Int? = nil, solved: Bool? = nil) {
+    init(date: Date, guesses: Int?, solved: Bool) {
         self.date = date
         self.guesses = guesses
         self.solved = solved

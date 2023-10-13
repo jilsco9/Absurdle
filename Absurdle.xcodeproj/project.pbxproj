@@ -20,9 +20,11 @@
 		A104C57F2AD879EC003D8C4E /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104C57E2AD879EC003D8C4E /* SquareView.swift */; };
 		A104C5812AD87B06003D8C4E /* CurrentGuessSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104C5802AD87B06003D8C4E /* CurrentGuessSquare.swift */; };
 		A104C5832AD963D6003D8C4E /* AnimatingFlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104C5822AD963D6003D8C4E /* AnimatingFlipView.swift */; };
+		A104C5862AD968CC003D8C4E /* GameContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104C5852AD968CC003D8C4E /* GameContainerView.swift */; };
+		A104C5882AD96CE2003D8C4E /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104C5872AD96CE2003D8C4E /* StatsView.swift */; };
 		A17DE20C2AD75B2D00C3E901 /* AbsurdleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17DE20B2AD75B2D00C3E901 /* AbsurdleApp.swift */; };
 		A17DE20E2AD75B2D00C3E901 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17DE20D2AD75B2D00C3E901 /* ContentView.swift */; };
-		A17DE2102AD75B2D00C3E901 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17DE20F2AD75B2D00C3E901 /* Item.swift */; };
+		A17DE2102AD75B2D00C3E901 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17DE20F2AD75B2D00C3E901 /* Stats.swift */; };
 		A17DE2122AD75B2F00C3E901 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A17DE2112AD75B2F00C3E901 /* Assets.xcassets */; };
 		A17DE2152AD75B2F00C3E901 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A17DE2142AD75B2F00C3E901 /* Preview Assets.xcassets */; };
 		A17DE2212AD75B2F00C3E901 /* AbsurdleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17DE2202AD75B2F00C3E901 /* AbsurdleTests.swift */; };
@@ -62,10 +64,12 @@
 		A104C57E2AD879EC003D8C4E /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
 		A104C5802AD87B06003D8C4E /* CurrentGuessSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGuessSquare.swift; sourceTree = "<group>"; };
 		A104C5822AD963D6003D8C4E /* AnimatingFlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingFlipView.swift; sourceTree = "<group>"; };
+		A104C5852AD968CC003D8C4E /* GameContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameContainerView.swift; sourceTree = "<group>"; };
+		A104C5872AD96CE2003D8C4E /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		A17DE2082AD75B2D00C3E901 /* Absurdle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Absurdle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17DE20B2AD75B2D00C3E901 /* AbsurdleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsurdleApp.swift; sourceTree = "<group>"; };
 		A17DE20D2AD75B2D00C3E901 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A17DE20F2AD75B2D00C3E901 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A17DE20F2AD75B2D00C3E901 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		A17DE2112AD75B2F00C3E901 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A17DE2142AD75B2F00C3E901 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A17DE2162AD75B2F00C3E901 /* Absurdle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Absurdle.entitlements; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				A104C56D2AD85AB6003D8C4E /* LetterResult.swift */,
 				A104C5732AD85B73003D8C4E /* GameView.swift */,
 				A104C5752AD85DCD003D8C4E /* GuessView.swift */,
+				A104C5852AD968CC003D8C4E /* GameContainerView.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -138,6 +143,15 @@
 			path = LetterSquares;
 			sourceTree = "<group>";
 		};
+		A104C5842AD966B0003D8C4E /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				A17DE20F2AD75B2D00C3E901 /* Stats.swift */,
+				A104C5872AD96CE2003D8C4E /* StatsView.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
 		A17DE1FF2AD75B2D00C3E901 = {
 			isa = PBXGroup;
 			children = (
@@ -161,12 +175,12 @@
 		A17DE20A2AD75B2D00C3E901 /* Absurdle */ = {
 			isa = PBXGroup;
 			children = (
+				A104C5842AD966B0003D8C4E /* Stats */,
 				A104C5722AD85B2E003D8C4E /* GameClient */,
 				A104C5712AD85B0F003D8C4E /* Game */,
 				A17DE20B2AD75B2D00C3E901 /* AbsurdleApp.swift */,
 				A17DE20D2AD75B2D00C3E901 /* ContentView.swift */,
 				A104C56B2AD85A02003D8C4E /* AbsurdleError.swift */,
-				A17DE20F2AD75B2D00C3E901 /* Item.swift */,
 				A17DE2112AD75B2F00C3E901 /* Assets.xcassets */,
 				A17DE2162AD75B2F00C3E901 /* Absurdle.entitlements */,
 				A17DE2172AD75B2F00C3E901 /* Info.plist */,
@@ -332,7 +346,7 @@
 			files = (
 				A104C56C2AD85A02003D8C4E /* AbsurdleError.swift in Sources */,
 				A17DE20E2AD75B2D00C3E901 /* ContentView.swift in Sources */,
-				A17DE2102AD75B2D00C3E901 /* Item.swift in Sources */,
+				A17DE2102AD75B2D00C3E901 /* Stats.swift in Sources */,
 				A104C5702AD85AE8003D8C4E /* GameDetails.swift in Sources */,
 				A104C5742AD85B73003D8C4E /* GameView.swift in Sources */,
 				A17DE20C2AD75B2D00C3E901 /* AbsurdleApp.swift in Sources */,
@@ -344,6 +358,8 @@
 				A104C57B2AD87980003D8C4E /* LetterSquare.swift in Sources */,
 				A17DE23A2AD75EDF00C3E901 /* GameEngine.swift in Sources */,
 				A104C5792AD87924003D8C4E /* ResultSquare.swift in Sources */,
+				A104C5882AD96CE2003D8C4E /* StatsView.swift in Sources */,
+				A104C5862AD968CC003D8C4E /* GameContainerView.swift in Sources */,
 				A104C56A2AD85971003D8C4E /* GuessHandler.swift in Sources */,
 				A104C5812AD87B06003D8C4E /* CurrentGuessSquare.swift in Sources */,
 				A104C5682AD85947003D8C4E /* GameClient.swift in Sources */,

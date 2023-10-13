@@ -9,21 +9,26 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @Environment(\.modelContext) private var modelContext
+    
+    @State private var showingStatsSheet = false
+    
     var body: some View {
-        GameView()
-            .navigationTitle("Absurdle")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        
-                    } label: {
-                        Label("Stats", systemImage: "chart.bar")
-                            .labelStyle(.iconOnly)
-                    }
+        GameContainerView()
+        .navigationTitle("Absurdle")
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    showingStatsSheet.toggle()
+                } label: {
+                    Label("Stats", systemImage: "chart.bar")
+                        .labelStyle(.iconOnly)
                 }
             }
-        
-        
+        }
+        .sheet(isPresented: $showingStatsSheet) {
+            StatsView()
+        }
     }
 }
 
