@@ -19,6 +19,7 @@
 		A104C57D2AD879D2003D8C4E /* TextEntrySquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104C57C2AD879D2003D8C4E /* TextEntrySquare.swift */; };
 		A104C57F2AD879EC003D8C4E /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104C57E2AD879EC003D8C4E /* SquareView.swift */; };
 		A104C5812AD87B06003D8C4E /* CurrentGuessSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104C5802AD87B06003D8C4E /* CurrentGuessSquare.swift */; };
+		A104C5832AD963D6003D8C4E /* AnimatingFlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104C5822AD963D6003D8C4E /* AnimatingFlipView.swift */; };
 		A17DE20C2AD75B2D00C3E901 /* AbsurdleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17DE20B2AD75B2D00C3E901 /* AbsurdleApp.swift */; };
 		A17DE20E2AD75B2D00C3E901 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17DE20D2AD75B2D00C3E901 /* ContentView.swift */; };
 		A17DE2102AD75B2D00C3E901 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17DE20F2AD75B2D00C3E901 /* Item.swift */; };
@@ -60,6 +61,7 @@
 		A104C57C2AD879D2003D8C4E /* TextEntrySquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntrySquare.swift; sourceTree = "<group>"; };
 		A104C57E2AD879EC003D8C4E /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
 		A104C5802AD87B06003D8C4E /* CurrentGuessSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGuessSquare.swift; sourceTree = "<group>"; };
+		A104C5822AD963D6003D8C4E /* AnimatingFlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingFlipView.swift; sourceTree = "<group>"; };
 		A17DE2082AD75B2D00C3E901 /* Absurdle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Absurdle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17DE20B2AD75B2D00C3E901 /* AbsurdleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsurdleApp.swift; sourceTree = "<group>"; };
 		A17DE20D2AD75B2D00C3E901 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				A104C57C2AD879D2003D8C4E /* TextEntrySquare.swift */,
 				A104C57E2AD879EC003D8C4E /* SquareView.swift */,
 				A104C5802AD87B06003D8C4E /* CurrentGuessSquare.swift */,
+				A104C5822AD963D6003D8C4E /* AnimatingFlipView.swift */,
 			);
 			path = LetterSquares;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				A104C5702AD85AE8003D8C4E /* GameDetails.swift in Sources */,
 				A104C5742AD85B73003D8C4E /* GameView.swift in Sources */,
 				A17DE20C2AD75B2D00C3E901 /* AbsurdleApp.swift in Sources */,
+				A104C5832AD963D6003D8C4E /* AnimatingFlipView.swift in Sources */,
 				A104C57F2AD879EC003D8C4E /* SquareView.swift in Sources */,
 				A104C57D2AD879D2003D8C4E /* TextEntrySquare.swift in Sources */,
 				A104C5762AD85DCD003D8C4E /* GuessView.swift in Sources */,

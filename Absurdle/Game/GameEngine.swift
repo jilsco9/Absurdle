@@ -26,7 +26,7 @@ class GameEngine: ObservableObject {
         guessHandler = GuessHandler(gameDetails: gameDetails, wordLength: Self.wordLength)
     }
     
-    func guessWord(_ guess: String) async throws -> [LetterResult] {
+    func guessWord(_ guess: String) async throws -> [GuessedLetterResult] {
         guard let guessHandler else { throw GameError.notReady }
         
         // Validating guess
@@ -34,6 +34,6 @@ class GameEngine: ObservableObject {
         let isAWord = try await gameClient.isGuessAWord(guess)
         guard isAWord else { throw GuessError.notAWord }
         
-        return guessHandler.guessWord(guess)
+        return guessHandler.guessWord(guess).map { GuessedLetterResult(result: $0) }
     }
 }

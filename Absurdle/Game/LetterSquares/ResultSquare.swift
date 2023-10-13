@@ -17,6 +17,21 @@ struct ResultSquare: View {
     }
 }
 
+struct AnimatingResultSquare: View {
+    @StateObject var result: GuessedLetterResult
+    
+    var body: some View {
+        AnimatingFlipView(isFlipped: $result.revealed,
+                          front: {
+            LetterSquare(backgroundColor: .white) {
+                Text(result.result.text)
+            }
+        }, back: {
+            ResultSquare(result: result.result)
+        })
+    }
+}
+
 #Preview {
     ResultSquare(result: .correctLocation("A"))
 }

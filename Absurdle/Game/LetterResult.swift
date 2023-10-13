@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+class GuessedLetterResult: ObservableObject {
+    let result: LetterResult
+    @Published var revealed: Bool = false
+    
+    init(result: LetterResult) {
+        self.result = result
+    }
+}
+
 enum LetterResult {
     case correctLocation(String)
     case incorrectLocation(String)
